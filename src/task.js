@@ -1,3 +1,7 @@
 class Task {
-  // your code here
+  constructor(list, description, priority) {
+    this.description = description
+    this.priority = priority
+    list.addTask(this)
+  }
 }

@@ -1,3 +1,12 @@
+let listStore = []
 class List {
-  // your code here
+  constructor(title) {
+    this.title = title
+    this.tasks = []
+    listStore.push(this)
+  }
+
+  addTask(task) {
+    this.tasks.push(task)
+  }
 }

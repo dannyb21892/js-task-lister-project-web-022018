@@ -10,15 +10,30 @@
   <div id="main-content">
     <h1>Flatiron Task Lister</h1>
 
-    <form id="create-list-form" action="#" method="post">
+    <form id="create-list-form" action="#" method="">
      <label for="new-list-title">Add a new list:</label>
      <input required type="text" id="new-list-title" name="new-list-title" placeholder="title">
-     <input type="submit" value="Create New List">
+     <button id="submitList" type="button">Create new list</button>
     </form>
 
-    <div id="app-content"></div>
+  <div id="app-content" style="visibility: hidden">
+    <form id="create-task-form">
+      <label for="parent-list">Select List:</label>
+      <select id="parent-list">
+      </select>
 
+      <label for="new-task-description">Task description:</label>
+      <input required type="text" id="new-task-description" placeholder="description">
 
+      <label for="new-task-priority">Priority level:</label>
+      <input type="text" id="new-task-priority" placeholder="priority">
+      <button id="submitTask" type="button">Create New Task</button>
+    </form>
+  </div>
+
+  <div id="lists"></div>
+
+    <script src="src/taskLister.js"></script>
     <script src="src/index.js"></script>
     <script src="src/app.js"></script>
     <script src="src/task.js"></script>
